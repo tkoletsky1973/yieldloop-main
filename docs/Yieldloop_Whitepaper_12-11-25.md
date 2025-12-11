@@ -305,7 +305,8 @@ Additional assets such as BNB, ETH, or LOOP may be supported in future versions,
 Users deposit **USDT** into YieldLoop using a supported EVM wallet.
 
 - Minimum deposit: **$50 USDT**  
-- $1 is allocated to AI/engine operations  
+- A small portion (up to **$1**) may be allocated to AI/engine operations  
+- The remainder of the deposit participates fully in the 30-day cycle   
 
 ## **Step 3 — Select Settings**
 
