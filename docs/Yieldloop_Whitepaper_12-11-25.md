@@ -1227,7 +1227,7 @@ If you believe in what YieldLoop represents, join us:
 ### **📩 Founder Email**  
 **founder@yieldloop.io**
 
-### **🌐 Website** (always in progess)
+### **🌐 Website** (in progress)
 **https://yieldloop.io**
 
 ### **💬 Discord Community**  
