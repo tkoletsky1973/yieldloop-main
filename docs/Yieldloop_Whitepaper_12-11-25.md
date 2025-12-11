@@ -24,7 +24,7 @@ Each cycle produces one binary result:
 Nothing in between.  
 Nothing fabricated.
 
-Users deposit ETH/BNB, USDT or LOOP(TBD still), choose either **AI-Guided Mode** or **Trading Settings**, select how verified profit should be handled (compound, split, withdraw), and the system manages the rest.  
+Users deposit USDT or ETH (TBD) (with a simple minimum and a small portion allocated to AI/engine operations),, choose either **AI-Guided Mode** or **Trading Settings**, select how verified profit should be handled (compound, split, withdraw), and the system manages the rest.  
 The user experience is simple — the engine carries the complexity.
 
 At the heart of YieldLoop is the **Verification Rule**:
@@ -295,49 +295,43 @@ YieldLoop never takes custody of assets; the user remains in control.
 
 Supported deposit assets:
 - **BNB**
-- **YLP** (YieldLoop Token)
-
-Deposits made in **YLP** receive a platform fee discount.
-
----
-
-## **Step 2 — Choose Your Risk Level**
-
-Users select one of YieldLoop’s predefined risk tiers:
-
-- **Ultra Low Risk**  
-- **Low Risk**  
-- **Medium Risk**  
-- **High Risk**  
-- **Unrestricted**
-
-This determines:
-- which pools or strategies are eligible,  
-- how the system allocates capital,  
-- and how aggressive the trading engine may become.
-
-The user does *not* need to understand the underlying strategies; the system handles all logic internally.
+- **ETH**
+- **LOOP**
+- (TBD)
 
 ---
+## **Step 2 — Click Deposit**
 
-## **Step 3 — Set Your Profit Preference**
+Users deposit **USDT** into YieldLoop using a supported EVM wallet.
 
-At the start of each 30-day cycle, users choose how verified profit is handled:
+- Minimum deposit: **$51 USDT**  
+- $1 is allocated to AI/engine operations  
+- The remaining $50 participates fully in the cycle
 
-1. **Compound All**  
-   - 100% of profit is reinvested.
 
-2. **Split 50/50**  
-   - Half is reinvested, half is sent to the wallet.
+## **Step 3 — Select Settings**
 
-3. **Withdraw All**  
-   - All verified profit is withdrawn at the end of the cycle.
+Users choose between:
 
-Users may change this setting anytime during the cycle.  
-It is locked in only at cycle completion.
+- **Trading Settings** – a simple configuration where they can approve:
+  - supported trading pairs
+  - volatility tolerance range
+  - basic drawdown boundaries
+  - compounding behavior
+
+- **AI-Guided Mode (Recommended)** – where YieldLoop automatically configures:
+  - safe volatility bands
+  - conservative drawdown protections
+  - liquidity filters
+  - pause logic for unstable markets
+
+In both modes, users also choose how verified profit is handled:
+
+- **Compound All**
+- **Split 50/50**
+- **Withdraw All**
 
 ---
-
 ## **Step 4 — The 30-Day Verified Profit Cycle**
 
 Once a deposit is active, YieldLoop executes the following — automatically:
@@ -478,12 +472,18 @@ AI-Guided Mode keeps YieldLoop:
 
 ## **Strategy Modules (High-Level Overview)**
 
-YieldLoop uses multiple safe, proven strategies depending on chosen settings and market conditions:
+YieldLoop uses three core trading methods, balanced through safety filters:
 
-- **Yield farming**  
-- **Grid trading**  
-- **Index-based allocations**  
-- **Selective arbitrage (PCS ↔ Biswap only)**  
+- **Yield Farming**  
+  Captures real APR from stable, high-liquidity LP pairs.
+
+- **Grid Trading**  
+  Harvests volatility with controlled buy/sell bands.
+
+- **Stablecoin Staking**  
+  Provides a low-volatility anchor that stabilizes performance during choppy or low-opportunity markets.
+
+- **Selective arbitrage (PCS ↔ Biswap only)** (TBD)
 
 The exact strategy mix is determined by the engine within the approved user settings.
 
@@ -746,9 +746,11 @@ A clear start → end cycle gives users predictable behavior and clean performan
 ### **2. No Hidden Leverage**
 YieldLoop never borrows user funds, never takes margin positions, and never exposes users to liquidation risk.
 
-### **3. Segmented Risk Tiers**
-High-risk strategies are fully isolated from lower-risk users.  
-Users choose the risk — the system never forces it.
+### **3. Guarded Strategy Settings**
+Strategies operate only inside approved settings:
+- no hidden “high-risk modes”
+- clear boundaries on volatility and drawdown
+- automatic pauses under extreme conditions
 
 ### **4. Verified-Profit Rule**
 No cycle can declare profit unless the system mathematically proves surplus after friction.  
@@ -893,9 +895,9 @@ Most yield platforms overwhelm users with:
 
 YieldLoop reduces the entire user experience to:
 
-1. **Deposit**
-2. **Choose risk**
-3. **Choose how profit is handled**
+1. **Deposit USDT**
+2. **Select Trading Settings or AI-Guided Mode**
+3. **Choose how verified profit is handled**
 4. **Let the engine run the 30-day cycle**
 
 That’s it.
