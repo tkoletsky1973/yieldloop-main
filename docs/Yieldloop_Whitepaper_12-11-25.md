@@ -24,7 +24,7 @@ Each cycle produces one binary result:
 Nothing in between.  
 Nothing fabricated.
 
-Users deposit USDT or ETH (TBD) (with a simple minimum and a small portion allocated to AI/engine operations),, choose either **AI-Guided Mode** or **Trading Settings**, select how verified profit should be handled (compound, split, withdraw), and the system manages the rest.  
+Users deposit USDT (with a simple minimum and a small portion allocated to AI/engine operations), then choose either **AI-Guided Mode** or **Trading Settings**, select how verified profit should be handled (compound, split, withdraw), and the system manages the rest.  
 The user experience is simple — the engine carries the complexity.
 
 At the heart of YieldLoop is the **Verification Rule**:
@@ -294,20 +294,18 @@ Users connect using any supported Web3 wallet.
 YieldLoop never takes custody of assets; the user remains in control.
 
 Supported deposit assets:
-- **BNB**
-- **ETH**
-- **LOOP**
-- (TBD)
+
+- **USDT** (primary deposit asset)
+
+Additional assets such as BNB, ETH, or LOOP may be supported in future versions, but the initial implementation is intentionally simple and USDT-based.
 
 ---
 ## **Step 2 — Click Deposit**
 
 Users deposit **USDT** into YieldLoop using a supported EVM wallet.
 
-- Minimum deposit: **$51 USDT**  
+- Minimum deposit: **$50 USDT**  
 - $1 is allocated to AI/engine operations  
-- The remaining $50 participates fully in the cycle
-
 
 ## **Step 3 — Select Settings**
 
@@ -336,7 +334,7 @@ In both modes, users also choose how verified profit is handled:
 
 Once a deposit is active, YieldLoop executes the following — automatically:
 
-- Allocates capital according to the user's risk tier  
+- Allocates capital according to the approved settings or AI-guided configuration    
 - Executes strategy logic  
 - Tracks every trade  
 - Measures friction (gas, slippage, etc.)  
@@ -482,8 +480,6 @@ YieldLoop uses three core trading methods, balanced through safety filters:
 
 - **Stablecoin Staking**  
   Provides a low-volatility anchor that stabilizes performance during choppy or low-opportunity markets.
-
-- **Selective arbitrage (PCS ↔ Biswap only)** (TBD)
 
 The exact strategy mix is determined by the engine within the approved user settings.
 
@@ -801,7 +797,7 @@ All yield is based on verified surplus.
 If no surplus exists, no profit is distributed.
 
 ### **Global-Friendly Structure**
-The YieldLoop LLC and supporting entities are designed to support international users without triggering investment contract issues.
+YieldLoop LLC is structured to support international users where legally permissible, without offering tokenized profit rights or investment contracts. The focus is on providing access to a proof-driven platform, not on selling financial products.
 
 ---
 
